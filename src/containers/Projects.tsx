@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button, ProjectCard, Wrapper } from '../components';
 import { PROJECTS_INITIALLY } from '../utils/config';
-import { sortByYear } from '../utils/helper';
 import { projectsSection } from '../utils/portfolio';
 import { getSectionAnimation, projectVariants } from '../animations';
 
@@ -22,7 +21,7 @@ const Projects = () => {
         {title}
       </motion.h2>
       <div className="grid grid-cols-auto-250 xs:grid-cols-auto-300 gap-6 place-items-center">
-        {sortByYear(visibleProjects).map((project, i) => {
+        {(visibleProjects).map((project, i) => {
           if (i < PROJECTS_INITIALLY) {
             return (
               <ProjectCard

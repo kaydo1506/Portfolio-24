@@ -13,7 +13,6 @@ const fullConfig = resolveConfig(tailwindConfig);
 export const getBreakpointsWidth = (breakpoint: BreakpointType) => {
   // @ts-ignore
   return +fullConfig?.theme?.screens[breakpoint].slice(0, -2);
-  // ! Property 'sm' does not exist on type 'ResolvableTo<ScreensConfig>'
 };
 
 /**
@@ -29,9 +28,6 @@ export const getId = () => `id${Math.random().toString(16).slice(2)}`;
  * @returns {ProjectType[]} array of sorted projects
  */
 
-export const sortByYear = (projects: ProjectType[]) => {
-  return projects.sort((a, b) => b.year - a.year);
-};
 
 /**
  * Modifies the given object by removing the given keys
