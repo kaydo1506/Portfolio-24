@@ -167,7 +167,7 @@ export const experienceSection: ExperienceSectionType = {
       company: 'Intavalto',
       companyUrl: 'https://intavalto.com/',
       role: 'Frontend Web Developer & Technical Support',
-      started: 'March 2022',
+      started: 'June 2017',
       tasks: [
         'I was in charge of dispensing technical services',
         'I refactored code to meet the latest development requirements and browser compatibility',
