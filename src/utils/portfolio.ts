@@ -68,8 +68,8 @@ export const navbarSection: NavbarSectionType = {
 // * Hero Section
 
 export const heroSection: HeroSectionType = {
-  subtitle: "Hi 👋, I'm ",
-  title: 'Rachael',
+  subtitle: "Hi 👋🏾,  I'm  ",
+  title: ' Rachael',
   tagline1: '<frontend Engineer/>',
   tagline2: 'designer',
   description1:
@@ -77,7 +77,6 @@ export const heroSection: HeroSectionType = {
   description2:
     'I’m also a visual and experience designer with focus on user interfaces',
 };
-
 // * About Section
 
 export const aboutSection: AboutSectionType = {
