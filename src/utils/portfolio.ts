@@ -93,7 +93,7 @@ export const aboutSection: AboutSectionType = {
       'SASS'
     ],
   },
-  img: '/Rachael.png',
+  img: '/img/Rachael.png',
 };
 
 // * Skills Section

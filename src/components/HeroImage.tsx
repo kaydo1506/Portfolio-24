@@ -10,9 +10,10 @@ const HeroImage = ({ src, alt }: Props) => {
         alt={alt}
         width={300}
         height={300}
-        className="rounded shadow-xl transition-transform  duration-150 ease-in-out group-hover:scale-75"
+        className="rounded shadow-xl "
+        priority
       />
-      <div className="absolute inset-0 border-[3px] z-[-1] rounded border-amber-900 duration-150 sm:block"></div>
+      <div className="absolute inset-0 border-[3px] z-[-1] rounded border-amber-900 translate-x-6 translate-y-6 group-hover:translate-x-4 group-hover:translate-y-4 duration-150 hidden sm:block"></div>
     </div>
   );
 };
