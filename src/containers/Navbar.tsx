@@ -5,38 +5,6 @@ import { fadeIn, slideIn } from '../animations';
 import { author, navbarSection } from '../utils/portfolio';
 import { getBreakpointsWidth, getId } from '../utils/helper';
 import useWindowWidth from '../hooks/use-window-width';
-
-/**
- * Hides the navbar while scrolling down
- * @param {Object} config
- * @param {String} [config.id=navbar] - id of navbar
- * @param {Number} [config.offset=100] - offset of navbar in px
- */
-
-const hideNavWhileScrolling = ({
-  id = 'navbar',
-  offset = 100,
-  when = true,
-}: {
-  id?: string;
-  offset?: number;
-  when: boolean;
-}) => {
-  const nav = document.getElementById(id);
-  if (!nav) return;
-
-  let prevScrollPos = window.pageYOffset;
-
-  window.onscroll = () => {
-    if (when) {
-      let curScrollPos = window.pageYOffset;
-      if (prevScrollPos < curScrollPos) nav.style.top = `-${offset}px`;
-      else nav.style.top = '0';
-      prevScrollPos = curScrollPos;
-    }
-  };
-};
-
 type NavItemsProps = {
   href?: string;
   children: React.ReactNode;
@@ -66,16 +34,12 @@ const NavItem = ({ href, children, onClick, index, delay }: NavItemsProps) => {
 };
 
 const Navbar = () => {
-  const { navLinks } = navbarSection;
+  const { navLinks } = navbarSection; // Assuming you have navbarSection and author defined somewhere
   const [navbarCollapsed, setNavbarCollapsed] = useState(false);
 
   const windowWidth = useWindowWidth();
   const md = getBreakpointsWidth('md');
   const ANIMATION_DELAY = windowWidth <= md ? 0 : 0.8;
-
-  useEffect(() => {
-    hideNavWhileScrolling({ when: !navbarCollapsed });
-  }, [navbarCollapsed]);
 
   return (
     <motion.header
@@ -83,7 +47,7 @@ const Navbar = () => {
       initial="hidden"
       animate="show"
       id="navbar"
-      className="px-8 md:px-6 xl:px-12 py-4 fixed inset-x-0 top-0 right-0 flex justify-between items-end z-50 duration-500 backdrop-blur-lg"
+      className="px-8 md:px-6 xl:px-12 py-4 fixed inset-x-0 top-0 z-50 duration-500 backdrop-blur-lg flex justify-between"
     >
       <h1 className="font-signature capitalize text-2xl relative group top-1 text-amber-900">
         <a href="/#hero" className="block">
@@ -97,15 +61,15 @@ const Navbar = () => {
           setNavbarCollapsed((prev) => !prev);
         }}
         navbarCollapsed={navbarCollapsed}
-        className="md:invisible"
+        className="md:hidden"
       />
 
       {(navbarCollapsed || windowWidth > md) && (
         <nav
-          className={`capitalize absolute text-sm duration-200 md:bg-transparent z-50 w-[90%] left-1/2 -translate-x-1/2 top-full h-max rounded-xl shadow-xl p-6 bg-bg-secondary md:blocks md:static md:w-auto md:left-auto md:transform-none md:top-auto md:rounded-none md:shadow-none md:p-0 md:h-auto`}
+          className={`capitalize text-sm md:bg-transparent z-50 w-full md:w-auto md:static md:p-0 md:h-auto`}
         >
           <ul
-            className={`list-style-none flex flex-col gap-3 lg:gap-5 xl:gap-6 md:flex-row items-stretch md:items-center`}
+            className={`list-none flex flex-col md:flex-row gap-3 lg:gap-5 xl:gap-6 items-stretch md:items-center`}
           >
             {navLinks.map(({ name, url }, i) => (
               <NavItem

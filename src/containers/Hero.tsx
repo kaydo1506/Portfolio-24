@@ -6,14 +6,8 @@ import { heroSection } from '../utils/portfolio';
 import { slideUp } from '../animations';
 
 const Hero = () => {
-  const {
-    subtitle,
-    title,
-    tagline1,
-    tagline2,
-    description1,
-    description2,
-  } = heroSection;
+  const { subtitle, title, tagline1, tagline2, description1, description2 } =
+    heroSection;
 
   const windowWidth = useWindowWidth();
   const md = getBreakpointsWidth('md');
@@ -31,7 +25,7 @@ const Hero = () => {
         variants={slideUp({ delay: getAnimationDelay(0) })}
         initial="hidden"
         animate="show"
-        className="text-slate-900 dark:text-slate-200 capitalize mb-2 leading-[1.2] md:text-7xl text-4xl max-w-5xl font-bold"
+        className="text-slate-900 dark:text-slate-400 capitalize mb-2 leading-[1.2] md:text-7xl text-4xl max-w-5xl font-bold"
       >
         {subtitle}
         <motion.span
