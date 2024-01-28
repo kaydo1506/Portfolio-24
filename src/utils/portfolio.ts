@@ -20,13 +20,12 @@ import { getId } from './helper';
  */
 
 export const socialLinks: StringKeyValueType = {
-
   github: 'https://github.com/kaydo1506',
   linkedin: 'https://www.linkedin.com/in/ify-okedo/',
 };
 
 export const author = {
-  name: 'Rachael Okedo',
+  name: 'RIO',
   email: 'okedo.ir@gmail.com',
 };
 
@@ -35,8 +34,7 @@ export const seoData = {
   description:
     'Rachael builds responsive and engaging products for the web using frontend React and Next JS',
   author: author.name,
-  image:
-    '#',
+  image: '#',
   url: '',
   keywords: [
     'Rachael',
@@ -62,7 +60,7 @@ export const navbarSection: NavbarSectionType = {
     { name: 'skills', url: '/#skills' },
     { name: 'experience', url: '/#experience' },
     { name: 'projects', url: '/#projects' },
-  ]
+  ],
 };
 
 // * Hero Section
@@ -89,7 +87,7 @@ export const aboutSection: AboutSectionType = {
       'TailwindCSS',
       'Typescript',
       'Figma',
-      'SASS'
+      'SASS',
     ],
   },
   img: '/img/Rachael.png',
@@ -130,7 +128,6 @@ export const skillsSection: SkillsSectionType = {
         { name: 'database', icon: 'vscode-icons:file-type-sql' },
       ],
     },
-  
   ],
 };
 
@@ -196,6 +193,13 @@ export const projectsSection: ProjectsSectionType = {
       url: 'https://foodie-02.netlify.app/',
       img: '/img/foodie.png',
       tags: ['Vanilla JS', 'SASS', 'HTML', 'Parcel'],
+    },
+    {
+      id: getId(),
+      name: 'Allo - A dating app prototype',
+      url: 'https://www.figma.com/proto/hCWycDf4BnPbPk0NJ2hXEH/Envisioning?type=design&node-id=551-3081&t=vcJEfUnojpjDqqSa-0&scaling=scale-down&page-id=172%3A588&starting-point-node-id=543%3A2453',
+      img: '/img/Allo.png',
+      tags: ['Figma', ' Adobe After Effect'],
     },
     {
       id: getId(),

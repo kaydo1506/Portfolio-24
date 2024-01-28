@@ -49,7 +49,7 @@ const Navbar = () => {
       id="navbar"
       className="px-8 md:px-6 xl:px-12 py-4 fixed inset-x-0 top-0 z-50 duration-500 backdrop-blur-lg flex justify-between"
     >
-      <h1 className="font-signature capitalize text-2xl relative group top-1 text-amber-900">
+      <h1 className="font-rock-salt capitalize text-xl relative group top-1 text-amber-900">
         <a href="/#hero" className="block">
           {author.name}
           <div className="absolute bottom-1.5 left-0 h-[1px] w-0 group-hover:w-full bg-amber-900 duration-300"></div>
