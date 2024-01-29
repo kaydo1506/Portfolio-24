@@ -197,7 +197,7 @@ export const projectsSection: ProjectsSectionType = {
     {
       id: getId(),
       name: 'Allo - A dating app prototype',
-      url: 'https://www.figma.com/proto/hCWycDf4BnPbPk0NJ2hXEH/Envisioning?type=design&node-id=551-3081&t=vcJEfUnojpjDqqSa-0&scaling=scale-down&page-id=172%3A588&starting-point-node-id=543%3A2453',
+      url: 'https://www.figma.com/proto/t0mXfQNiIxEwARFXAWbp3O/Allo!?type=design&node-id=197-78&t=SaeUo9H4M42H9bjA-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=197%3A303',
       img: '/img/Allo.png',
       tags: ['Figma', ' Adobe After Effect'],
     },
